@@ -87,6 +87,8 @@
 #include <wmsdk.h>
 #include <propvarutil.h>
 
+#include "..\Explorer++\COMCompatibilityTypes.h"
+
 /* See http://connect.microsoft.com/VisualStudio/feedback/details/621653/including-stdint-after-intsafe-generates-warnings.
 This workaround is only
 required for VS 2010. */

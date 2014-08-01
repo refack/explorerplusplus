@@ -70,6 +70,6 @@ private:
 
 	IExplorerplusplus *m_pexpp;
 
-	std::unordered_map<IDCounter,std::wstring> m_mapID;
+	std::unordered_map<IDCounter,std::wstring,std::hash<UINT>> m_mapID;
 	IDCounter	m_IDCounter;
 };

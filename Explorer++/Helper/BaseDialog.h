@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "ResizableDialog.h"
 #include "MessageForwarder.h"
 #include "ReferenceCount.h"
