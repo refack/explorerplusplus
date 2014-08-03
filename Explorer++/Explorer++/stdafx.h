@@ -63,6 +63,8 @@
 #include <dwmapi.h>
 #include <WinInet.h>
 
+#include "..\Explorer++\COMCompatibilityTypes.h"
+
 #pragma warning(push)
 #pragma warning(disable:4995)
 #include <iostream>
