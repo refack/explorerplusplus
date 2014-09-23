@@ -13,7 +13,7 @@
 
 #include "stdafx.h"
 #include "HardwareChangeNotifier.h"
-
+#include <algorithm>
 
 CHardwareChangeNotifier::CHardwareChangeNotifier()
 {

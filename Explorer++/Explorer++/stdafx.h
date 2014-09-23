@@ -35,6 +35,8 @@
 
 #define OEMRESOURCE
 
+#pragma warning(disable:4996)
+
 // Windows Header Files:
 #include <windows.h>
 #include <windowsx.h>
@@ -73,8 +75,5 @@
 
 #include <cassert>
 
-/* Pantheios header files. */
-#pragma warning(push)
-#pragma warning(disable:4995)
-#include <pantheios\pantheios.hpp>
-#pragma warning(pop)
+#define IAsyncOperation IDataObjectAsyncCapability
+#define IID_IAsyncOperation IID_IDataObjectAsyncCapability

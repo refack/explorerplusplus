@@ -426,7 +426,8 @@ PFNLVGROUPCOMPARE pfnGroupCompare)
 
 		vi.dwOSVersionInfoSize	= sizeof(OSVERSIONINFO);
 
-		if(GetVersionEx(&vi) != 0)
+#pragma warning( disable: 4996 )
+    if (GetVersionEx(&vi) != 0)
 		{
 			/* LVGS_COLLAPSIBLE is only valid on Windows Vista
 			and later. */

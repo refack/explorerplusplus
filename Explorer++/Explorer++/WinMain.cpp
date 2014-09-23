@@ -15,8 +15,6 @@
  *****************************************************************/
 
 #include "stdafx.h"
-#include <pantheios\backends\bec.file.h>
-#include <pantheios\inserters\integer.hpp>
 #include "Explorer++.h"
 #include "RegistrySettings.h"
 #include "XMLSettings.h"
@@ -331,7 +329,8 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,
 
 	VersionInfo.dwOSVersionInfoSize	= sizeof(OSVERSIONINFO);
 
-	if(GetVersionEx(&VersionInfo) != 0)
+#pragma warning( disable: 4996 )
+  if (GetVersionEx(&VersionInfo) != 0)
 	{
 		/* Are we running on at least Windows XP?
 		If not, show an error message and exit. */
@@ -376,7 +375,6 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,
 		PathRemoveFileSpec(szLogFile);
 		PathAppend(szLogFile,NExplorerplusplus::LOG_FILENAME);
 
-		pantheios_be_file_setFilePath(szLogFile);
 	}
 
 	/* Can't open folders that are children of the
@@ -419,7 +417,8 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,
 					{
 						VersionInfo.dwOSVersionInfoSize	= sizeof(OSVERSIONINFO);
 
-						if(GetVersionEx(&VersionInfo) != 0)
+#pragma warning( disable: 4996 )
+            if (GetVersionEx(&VersionInfo) != 0)
 						{
 							if(VersionInfo.dwMajorVersion >= WINDOWS_VISTA_SEVEN_MAJORVERSION)
 							{
@@ -486,7 +485,6 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,
 	BOOL bLoadSettingsFromXML;
 
 	bLoadSettingsFromXML = TestConfigFileInternal();
-	pantheios::log(pantheios::informational,_T("bLoadSettingsFromXML = "),pantheios::integer(bLoadSettingsFromXML));
 
 	if(bLoadSettingsFromXML)
 	{

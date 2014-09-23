@@ -13,20 +13,15 @@
  * www.explorerplusplus.com
  *
  *****************************************************************/
-
 #include "stdafx.h"
+#include "Version.h"
+#include "UpdateCheckDialog.h"
+#include "MainResource.h"
+
 #include <stdexcept>
 #include <vector>
 #include <boost\algorithm\string.hpp>
-
-#pragma warning(push)
-#pragma warning(disable:4995)
 #include <boost\lexical_cast.hpp>
-#pragma warning(pop)
-
-#include "UpdateCheckDialog.h"
-#include "MainResource.h"
-#include "Version.h"
 
 
 const TCHAR CUpdateCheckDialogPersistentSettings::SETTINGS_KEY[] = _T("UpdateCheck");

@@ -115,7 +115,8 @@ INT_PTR CALLBACK CBaseDialog::BaseDialogProc(HWND hDlg,UINT uMsg,
 			{
 				OSVERSIONINFO VersionInfo;
 				VersionInfo.dwOSVersionInfoSize	= sizeof(VersionInfo);
-				GetVersionEx(&VersionInfo);
+#pragma warning( disable: 4996 )
+        GetVersionEx(&VersionInfo);
 
 				/* Automatic fix for KB813791 (gridlines draw incorrectly on Windows XP). */
 				if(VersionInfo.dwMajorVersion == WINDOWS_XP_MAJORVERSION)

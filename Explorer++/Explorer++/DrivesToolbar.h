@@ -7,6 +7,8 @@
 #include "../Helper/FileContextMenuManager.h"
 #include "../Helper/BaseWindow.h"
 
+typedef UINT IDCounter;
+
 class CDrivesToolbar : public CBaseWindow, public IFileContextMenuExternal, public NHardwareChangeNotifier::INotification
 {
 	friend LRESULT CALLBACK DrivesToolbarParentProcStub(HWND hwnd,UINT uMsg,WPARAM wParam,LPARAM lParam,UINT_PTR uIdSubclass,DWORD_PTR dwRefData);
@@ -25,8 +27,6 @@ protected:
 	INT_PTR	OnMButtonUp(const POINTS *pts);
 
 private:
-
-	BOOST_STRONG_TYPEDEF(UINT,IDCounter);
 
 	struct DriveInformation_t
 	{

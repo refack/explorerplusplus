@@ -87,7 +87,8 @@ m_hFolderSizeThread(hFolderSizeThread)
 	OSVERSIONINFO VersionInfo;
 	VersionInfo.dwOSVersionInfoSize	= sizeof(OSVERSIONINFO);
 
-	if(GetVersionEx(&VersionInfo) != 0)
+#pragma warning( disable: 4996 )
+  if (GetVersionEx(&VersionInfo) != 0)
 	{
 		m_dwMajorVersion = VersionInfo.dwMajorVersion;
 	}

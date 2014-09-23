@@ -39,6 +39,7 @@ CHolderWindow::CHolderWindow(HWND hHolder)
 	text used to draw the window header). See the documentation
 	for NONCLIENTMETRICS. ONLY NEEDED WHEN COMPILING FOR
 	VISTA OR LATER (i.e. WINVER >= 0x0600). */
+#pragma warning( disable: 4996 )
 	if(GetVersionEx(&VersionInfo) != 0)
 	{
 		m_dwMajorVersion = VersionInfo.dwMajorVersion;

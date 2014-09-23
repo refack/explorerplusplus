@@ -69,7 +69,8 @@ BOOL NDefaultFileManagerInternal::SetAsDefaultFileManagerInternal(NDefaultFileMa
 	OSVERSIONINFO osvi;
 	osvi.dwOSVersionInfoSize = sizeof(osvi);
 
-	BOOL bRet = GetVersionEx(&osvi);
+#pragma warning( disable: 4996 )
+  BOOL bRet = GetVersionEx(&osvi);
 
 	if(!bRet)
 	{
